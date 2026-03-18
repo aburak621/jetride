@@ -17,6 +17,7 @@ position = Vector2(530, 949)
 
 [node name="Floor" type="StaticBody2D" parent="Level" unique_id=1977284430]
 position = Vector2(960, 1000)
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Floor" unique_id=1783903967]
 shape = SubResource("WorldBoundaryShape2D_uwrxv")
@@ -28,6 +29,7 @@ offset_bottom = 80.0
 
 [node name="Floor2" type="StaticBody2D" parent="Level" unique_id=676607325]
 position = Vector2(960, 150)
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Floor2" unique_id=325242311]
 shape = SubResource("WorldBoundaryShape2D_yqjtg")
@@ -37,5 +39,5 @@ offset_left = -960.0
 offset_top = -150.0
 offset_right = 960.0
 
-[node name="ObstacleSpawner" type="Node2D" parent="Level" unique_id=588243369]
+[node name="ObstacleManager" type="Node2D" parent="Level" unique_id=588243369]
 script = ExtResource("2_yqjtg")

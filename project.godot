@@ -29,6 +29,12 @@ window/size/viewport_height=1080
 window/stretch/mode="viewport"
 window/vsync/vsync_mode=0
 
+[global_group]
+
+game=""
+level=""
+obstacle=""
+
 [input]
 
 jump={

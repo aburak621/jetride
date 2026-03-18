@@ -16,5 +16,5 @@ func _ready() -> void:
 	shape.radius = width / 2
 	shape.height = length
 
-	rotation = initial_rotation
+	rotation = deg_to_rad(initial_rotation)
 
