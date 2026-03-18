@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://de2rdyesd71m6"]
+
+[ext_resource type="PackedScene" uid="uid://n6l81yqmjqpo" path="res://scenes/player.tscn" id="1_uwrxv"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uwrxv"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yqjtg"]
+normal = Vector2(0, 1)
+
+[node name="Game" type="Node" unique_id=1898133290 groups=["game"]]
+
+[node name="Level" type="Node2D" parent="." unique_id=790338961 groups=["level"]]
+
+[node name="Player" parent="Level" unique_id=851363322 instance=ExtResource("1_uwrxv")]
+position = Vector2(530, 949)
+
+[node name="Floor" type="StaticBody2D" parent="Level" unique_id=1977284430]
+position = Vector2(960, 1000)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Floor" unique_id=1783903967]
+shape = SubResource("WorldBoundaryShape2D_uwrxv")
+
+[node name="ColorRect" type="ColorRect" parent="Level/Floor" unique_id=1653922223]
+offset_left = -960.0
+offset_right = 960.0
+offset_bottom = 80.0
+
+[node name="Floor2" type="StaticBody2D" parent="Level" unique_id=676607325]
+position = Vector2(960, 150)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Floor2" unique_id=325242311]
+shape = SubResource("WorldBoundaryShape2D_yqjtg")
+
+[node name="ColorRect" type="ColorRect" parent="Level/Floor2" unique_id=1829020171]
+offset_left = -960.0
+offset_top = -150.0
+offset_right = 960.0
