@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://de2rdyesd71m6"]
 
 [ext_resource type="PackedScene" uid="uid://n6l81yqmjqpo" path="res://scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="Script" uid="uid://cn2ygb0syg880" path="res://scripts/obstacle_spawner.gd" id="2_yqjtg"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uwrxv"]
 
@@ -35,3 +36,6 @@ shape = SubResource("WorldBoundaryShape2D_yqjtg")
 offset_left = -960.0
 offset_top = -150.0
 offset_right = 960.0
+
+[node name="ObstacleSpawner" type="Node2D" parent="Level" unique_id=588243369]
+script = ExtResource("2_yqjtg")

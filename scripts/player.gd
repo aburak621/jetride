@@ -5,6 +5,13 @@ class_name Player extends CharacterBody2D
 @export var max_jump_speed: float = 1666.5
 @export var max_fall_speed: float = 882.4
 
+@onready var collision: CollisionShape2D = $CollisionShape2D
+@onready var hurtbox: Area2D = $Hurtbox
+
+
+func _ready() -> void:
+	hurtbox.area_entered.connect(_on_area_entered)
+
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):
@@ -28,3 +35,7 @@ func _physics_process(delta: float) -> void:
 
 	velocity.x = 0
 	move_and_slide()
+
+
+func _on_area_entered(area: Area2D) -> void:
+	pass

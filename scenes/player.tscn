@@ -2,15 +2,16 @@
 
 [ext_resource type="Script" uid="uid://bhk1pudki33xe" path="res://scripts/player.gd" id="1_3vyb7"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8cj0n"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3vyb7"]
+size = Vector2(30, 100)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g2els"]
 radius = 15.0
 height = 100.0
 
 [node name="Player" type="CharacterBody2D" unique_id=851363322]
+collision_mask = 2
 script = ExtResource("1_3vyb7")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=609595744]
-shape = SubResource("CapsuleShape2D_8cj0n")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1636550760]
 anchors_preset = 8
@@ -24,3 +25,13 @@ offset_right = 15.0
 offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=609595744]
+shape = SubResource("RectangleShape2D_3vyb7")
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=1002812656]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=2039921360]
+shape = SubResource("CapsuleShape2D_g2els")
