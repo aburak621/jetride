@@ -1,4 +1,4 @@
-class_name Laser extends Area2D
+class_name Zapper extends Area2D
 
 @export var length: float = 270
 @export var width: float = 60

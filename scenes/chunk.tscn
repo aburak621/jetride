@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://e2w3n5bk75je"]
+
+[ext_resource type="Script" uid="uid://bhd1h26ak8cbt" path="res://scripts/chunk.gd" id="1_jas4a"]
+
+[node name="Chunk" type="Node2D" unique_id=843203618]
+script = ExtResource("1_jas4a")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=2026590173]
+rect = Rect2(-100, -10, 100, 20)

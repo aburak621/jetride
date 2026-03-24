@@ -1,19 +1,34 @@
 [gd_scene format=3 uid="uid://de2rdyesd71m6"]
 
+[ext_resource type="Script" uid="uid://decak41w6qgyq" path="res://scripts/game.gd" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://n6l81yqmjqpo" path="res://scenes/player.tscn" id="1_uwrxv"]
-[ext_resource type="Script" uid="uid://cn2ygb0syg880" path="res://scripts/obstacle_spawner.gd" id="2_yqjtg"]
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uwrxv"]
+[ext_resource type="Script" uid="uid://cn2ygb0syg880" path="res://scripts/obstacle_manager.gd" id="2_yqjtg"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yqjtg"]
 normal = Vector2(0, 1)
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uwrxv"]
+
 [node name="Game" type="Node" unique_id=1898133290 groups=["game"]]
+script = ExtResource("1_lnu2h")
 
 [node name="Level" type="Node2D" parent="." unique_id=790338961 groups=["level"]]
 
 [node name="Player" parent="Level" unique_id=851363322 instance=ExtResource("1_uwrxv")]
 position = Vector2(530, 949)
+
+[node name="Ceiling" type="StaticBody2D" parent="Level" unique_id=676607325]
+position = Vector2(960, 150)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Ceiling" unique_id=325242311]
+shape = SubResource("WorldBoundaryShape2D_yqjtg")
+
+[node name="ColorRect" type="ColorRect" parent="Level/Ceiling" unique_id=1829020171]
+offset_left = -960.0
+offset_top = -150.0
+offset_right = 960.0
+color = Color(0.275, 0.34249997, 0.5, 1)
 
 [node name="Floor" type="StaticBody2D" parent="Level" unique_id=1977284430]
 position = Vector2(960, 1000)
@@ -26,18 +41,8 @@ shape = SubResource("WorldBoundaryShape2D_uwrxv")
 offset_left = -960.0
 offset_right = 960.0
 offset_bottom = 80.0
-
-[node name="Floor2" type="StaticBody2D" parent="Level" unique_id=676607325]
-position = Vector2(960, 150)
-collision_layer = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/Floor2" unique_id=325242311]
-shape = SubResource("WorldBoundaryShape2D_yqjtg")
-
-[node name="ColorRect" type="ColorRect" parent="Level/Floor2" unique_id=1829020171]
-offset_left = -960.0
-offset_top = -150.0
-offset_right = 960.0
+color = Color(0.275, 0.34249997, 0.5, 1)
 
 [node name="ObstacleManager" type="Node2D" parent="Level" unique_id=588243369]
+position = Vector2(2120, 575)
 script = ExtResource("2_yqjtg")

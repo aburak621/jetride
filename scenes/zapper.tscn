@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://d0o5g2dq2syid"]
 
-[ext_resource type="Script" uid="uid://c21vdy7qygtn2" path="res://scripts/laser.gd" id="1_xmihv"]
+[ext_resource type="Script" uid="uid://c21vdy7qygtn2" path="res://scripts/zapper.gd" id="1_iivta"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a7dhc"]
 radius = 30.0
 height = 270.0
 
-[node name="Laser" type="Area2D" unique_id=314017376 groups=["obstacle"]]
+[node name="Zapper" type="Area2D" unique_id=314017376 groups=["obstacle"]]
 rotation = 1.5707964
 collision_layer = 4
 collision_mask = 0
-script = ExtResource("1_xmihv")
+script = ExtResource("1_iivta")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2145552695]
 shape = SubResource("CapsuleShape2D_a7dhc")
@@ -27,3 +27,4 @@ offset_right = 30.0
 offset_bottom = 135.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(1, 0.35833335, 0.23000002, 1)

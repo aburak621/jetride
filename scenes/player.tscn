@@ -25,6 +25,7 @@ offset_right = 36.0
 offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0.23000002, 1, 1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=609595744]
 shape = SubResource("RectangleShape2D_3vyb7")
