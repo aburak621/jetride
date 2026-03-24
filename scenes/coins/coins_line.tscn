@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://jyssm7oqjo0b"]
+
+[ext_resource type="PackedScene" uid="uid://tj34y60mtf1t" path="res://scenes/coins/coin.tscn" id="1_akb1v"]
+
+[node name="coins_line" type="Node2D" unique_id=1482436]
+
+[node name="Coin" parent="." unique_id=1910314053 instance=ExtResource("1_akb1v")]
+
+[node name="Coin2" parent="." unique_id=128024540 instance=ExtResource("1_akb1v")]
+position = Vector2(40, 0)
+
+[node name="Coin3" parent="." unique_id=1572616137 instance=ExtResource("1_akb1v")]
+position = Vector2(80, 0)
+
+[node name="Coin4" parent="." unique_id=1077186267 instance=ExtResource("1_akb1v")]
+position = Vector2(120, 0)
+
+[node name="Coin5" parent="." unique_id=2118651244 instance=ExtResource("1_akb1v")]
+position = Vector2(160, 0)
+
+[node name="Coin6" parent="." unique_id=1751449067 instance=ExtResource("1_akb1v")]
+position = Vector2(200, -40)
+
+[node name="Coin7" parent="." unique_id=2136366380 instance=ExtResource("1_akb1v")]
+position = Vector2(240, -40)
+
+[node name="Coin8" parent="." unique_id=1263796332 instance=ExtResource("1_akb1v")]
+position = Vector2(280, -40)
+
+[node name="Coin9" parent="." unique_id=74349691 instance=ExtResource("1_akb1v")]
+position = Vector2(320, -40)
+
+[node name="Coin10" parent="." unique_id=2021316779 instance=ExtResource("1_akb1v")]
+position = Vector2(360, -40)
+
+[node name="Coin11" parent="." unique_id=1589465847 instance=ExtResource("1_akb1v")]
+position = Vector2(400, -80)
+
+[node name="Coin12" parent="." unique_id=2071100157 instance=ExtResource("1_akb1v")]
+position = Vector2(440, -80)
+
+[node name="Coin13" parent="." unique_id=37137611 instance=ExtResource("1_akb1v")]
+position = Vector2(480, -80)
+
+[node name="Coin14" parent="." unique_id=1428253824 instance=ExtResource("1_akb1v")]
+position = Vector2(520, -80)
+
+[node name="Coin15" parent="." unique_id=238151255 instance=ExtResource("1_akb1v")]
+position = Vector2(560, -80)
+
+[node name="Coin16" parent="." unique_id=1233657753 instance=ExtResource("1_akb1v")]
+position = Vector2(600, -120)
+
+[node name="Coin17" parent="." unique_id=1030856662 instance=ExtResource("1_akb1v")]
+position = Vector2(640, -120)
+
+[node name="Coin18" parent="." unique_id=842881555 instance=ExtResource("1_akb1v")]
+position = Vector2(680, -120)
+
+[node name="Coin19" parent="." unique_id=2050414669 instance=ExtResource("1_akb1v")]
+position = Vector2(720, -120)
+
+[node name="Coin20" parent="." unique_id=434455745 instance=ExtResource("1_akb1v")]
+position = Vector2(760, -120)
+
+[node name="Coin21" parent="." unique_id=1611017592 instance=ExtResource("1_akb1v")]
+position = Vector2(800, -80)
+
+[node name="Coin22" parent="." unique_id=1783579199 instance=ExtResource("1_akb1v")]
+position = Vector2(840, -80)
+
+[node name="Coin23" parent="." unique_id=76259600 instance=ExtResource("1_akb1v")]
+position = Vector2(880, -80)
+
+[node name="Coin24" parent="." unique_id=1113658008 instance=ExtResource("1_akb1v")]
+position = Vector2(920, -80)
+
+[node name="Coin25" parent="." unique_id=368489105 instance=ExtResource("1_akb1v")]
+position = Vector2(960, -80)
+
+[node name="Coin26" parent="." unique_id=349247255 instance=ExtResource("1_akb1v")]
+position = Vector2(1000, -40)
+
+[node name="Coin27" parent="." unique_id=647995522 instance=ExtResource("1_akb1v")]
+position = Vector2(1040, -40)
+
+[node name="Coin28" parent="." unique_id=864413751 instance=ExtResource("1_akb1v")]
+position = Vector2(1080, -40)
+
+[node name="Coin29" parent="." unique_id=1596431885 instance=ExtResource("1_akb1v")]
+position = Vector2(1120, -40)
+
+[node name="Coin30" parent="." unique_id=1760448376 instance=ExtResource("1_akb1v")]
+position = Vector2(1160, -40)
+
+[node name="Coin31" parent="." unique_id=1947735838 instance=ExtResource("1_akb1v")]
+position = Vector2(1200, 0)
+
+[node name="Coin32" parent="." unique_id=1852671413 instance=ExtResource("1_akb1v")]
+position = Vector2(1240, 0)
+
+[node name="Coin33" parent="." unique_id=696235456 instance=ExtResource("1_akb1v")]
+position = Vector2(1280, 0)
+
+[node name="Coin34" parent="." unique_id=364062629 instance=ExtResource("1_akb1v")]
+position = Vector2(1320, 0)
+
+[node name="Coin35" parent="." unique_id=1231530463 instance=ExtResource("1_akb1v")]
+position = Vector2(1360, 0)

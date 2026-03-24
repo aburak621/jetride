@@ -34,6 +34,7 @@ window/vsync/vsync_mode=0
 game=""
 level=""
 obstacle=""
+coin=""
 
 [input]
 
@@ -50,6 +51,7 @@ jump={
 2d_physics/layer_1="player"
 2d_physics/layer_2="wall"
 2d_physics/layer_3="obstacle"
+2d_physics/layer_4="coin"
 
 [physics]
 

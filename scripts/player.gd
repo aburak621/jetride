@@ -1,5 +1,7 @@
 class_name Player extends CharacterBody2D
 
+signal coin_collected(total_coins: int)
+
 @export var gravity: float = 4411.7
 @export var jump_acceleration: float = 3333.3 + gravity
 @export var max_jump_speed: float = 1666.5
@@ -8,9 +10,11 @@ class_name Player extends CharacterBody2D
 @onready var collision: CollisionShape2D = $CollisionShape2D
 @onready var hurtbox: Area2D = $Hurtbox
 
+var coins_collected: int
+
 
 func _ready() -> void:
-	hurtbox.area_entered.connect(_on_area_entered)
+	hurtbox.area_entered.connect(_on_hurtbox_entered)
 
 
 func _physics_process(delta: float) -> void:
@@ -37,5 +41,10 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 
-func _on_area_entered(area: Area2D) -> void:
-	print("Man I'm dead.")
+func _on_hurtbox_entered(area: Area2D) -> void:
+	if area.is_in_group("coin"):
+		(area as Coin).collect()
+		coins_collected += 1
+		coin_collected.emit(coins_collected)
+	elif area.is_in_group("obstacle"):
+		print("Man I'm dead.")
