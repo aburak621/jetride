@@ -3,11 +3,24 @@
 [ext_resource type="Script" uid="uid://decak41w6qgyq" path="res://scripts/game.gd" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://n6l81yqmjqpo" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://cn2ygb0syg880" path="res://scripts/obstacle_manager.gd" id="2_yqjtg"]
+[ext_resource type="Script" uid="uid://cq5c7mlhha0im" path="res://scripts/zapper_data.gd" id="4_iywne"]
+[ext_resource type="PackedScene" uid="uid://d0o5g2dq2syid" path="res://scenes/zapper.tscn" id="4_lbhrr"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yqjtg"]
 normal = Vector2(0, 1)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_uwrxv"]
+
+[sub_resource type="Resource" id="Resource_iywne"]
+script = ExtResource("4_iywne")
+rotation_speed = 180.0
+metadata/_custom_type_script = "uid://cq5c7mlhha0im"
+
+[sub_resource type="Resource" id="Resource_p57ef"]
+script = ExtResource("4_iywne")
+length = 540.0
+rotation_speed = 180.0
+metadata/_custom_type_script = "uid://cq5c7mlhha0im"
 
 [node name="Game" type="Node" unique_id=1898133290 groups=["game"]]
 script = ExtResource("1_lnu2h")
@@ -44,5 +57,9 @@ offset_bottom = 80.0
 color = Color(0.275, 0.34249997, 0.5, 1)
 
 [node name="ObstacleManager" type="Node2D" parent="Level" unique_id=588243369]
-position = Vector2(2120, 575)
+position = Vector2(2420, 1000)
 script = ExtResource("2_yqjtg")
+zapper_datas = Array[ExtResource("4_iywne")]([SubResource("Resource_iywne"), SubResource("Resource_p57ef")])
+
+[node name="Zapper" parent="." unique_id=314017376 instance=ExtResource("4_lbhrr")]
+position = Vector2(920, 920)

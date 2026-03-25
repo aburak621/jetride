@@ -4,7 +4,11 @@
 
 [node name="coins_coins" type="Node2D" unique_id=464014987]
 
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1036821428]
+rect = Rect2(0, -100, 1120, 200)
+
 [node name="Coin" parent="." unique_id=1910314053 instance=ExtResource("1_rkup8")]
+position = Vector2(20, 0)
 
 [node name="Coin" parent="Coin" unique_id=943273740 instance=ExtResource("1_rkup8")]
 position = Vector2(0, 40)
@@ -31,7 +35,7 @@ position = Vector2(80, 80)
 position = Vector2(120, 80)
 
 [node name="Coin2" parent="." unique_id=864597913 instance=ExtResource("1_rkup8")]
-position = Vector2(200, 0)
+position = Vector2(220, 0)
 
 [node name="Coin" parent="Coin2" unique_id=1900648173 instance=ExtResource("1_rkup8")]
 position = Vector2(0, 40)
@@ -61,7 +65,7 @@ position = Vector2(120, 40)
 position = Vector2(120, 0)
 
 [node name="Coin3" parent="." unique_id=928733157 instance=ExtResource("1_rkup8")]
-position = Vector2(440, 0)
+position = Vector2(460, 0)
 
 [node name="Coin" parent="Coin3" unique_id=1924212106 instance=ExtResource("1_rkup8")]
 position = Vector2(0, 40)
@@ -88,7 +92,7 @@ position = Vector2(0, 80)
 position = Vector2(40, 80)
 
 [node name="Coin4" parent="." unique_id=2053176082 instance=ExtResource("1_rkup8")]
-position = Vector2(560, 0)
+position = Vector2(580, 0)
 
 [node name="Coin" parent="Coin4" unique_id=568123130 instance=ExtResource("1_rkup8")]
 position = Vector2(0, 40)
@@ -124,7 +128,7 @@ position = Vector2(120, -40)
 position = Vector2(120, -80)
 
 [node name="Coin5" parent="." unique_id=679831312 instance=ExtResource("1_rkup8")]
-position = Vector2(760, 0)
+position = Vector2(780, 0)
 
 [node name="Coin" parent="Coin5" unique_id=854103682 instance=ExtResource("1_rkup8")]
 position = Vector2(0, 80)
@@ -163,7 +167,7 @@ position = Vector2(120, 80)
 position = Vector2(120, 40)
 
 [node name="Coin6" parent="." unique_id=1886232258 instance=ExtResource("1_rkup8")]
-position = Vector2(1000, 0)
+position = Vector2(1020, 0)
 
 [node name="Coin" parent="Coin6" unique_id=234716442 instance=ExtResource("1_rkup8")]
 position = Vector2(0, 80)
@@ -175,7 +179,7 @@ position = Vector2(0, -80)
 position = Vector2(0, -40)
 
 [node name="Coin7" parent="." unique_id=827726333 instance=ExtResource("1_rkup8")]
-position = Vector2(1080, 0)
+position = Vector2(1100, 0)
 
 [node name="Coin" parent="Coin7" unique_id=1773257886 instance=ExtResource("1_rkup8")]
 position = Vector2(0, 80)

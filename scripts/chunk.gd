@@ -9,12 +9,12 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
-	position.x -= game.game_speed
-
-
-func _on_screen_exited() -> void:
-	queue_free()
+	position.x -= game.game_speed * delta
 
 
 func set_chunk_width(width: float) -> void:
 	visible_notifier.rect.size.x = width + 100
+
+
+func _on_screen_exited() -> void:
+	queue_free()

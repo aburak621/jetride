@@ -6,4 +6,4 @@
 script = ExtResource("1_jas4a")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=2026590173]
-rect = Rect2(-100, -10, 100, 20)
+rect = Rect2(0, -10, 270, 20)

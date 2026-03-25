@@ -1,6 +1,6 @@
 class_name Game extends Node
 
-@export var game_speed: float = 200
+@export var game_speed: float = 800
 @export var max_game_speed: float = 1000
 @export var game_speed_increase_rate: float = (max_game_speed - game_speed) / 120
 
