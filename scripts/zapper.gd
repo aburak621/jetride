@@ -19,7 +19,7 @@ func apply_zapper_data() -> void:
 	rotation_speed = zapper_data.rotation_speed
 
 	position.x += zapper_data.x_offset
-	position.y = randf_range(-zapper_data.min_y, -zapper_data.max_y)
+	position.y = clamp(randi_range(1, 5) * -142, zapper_data.min_y - 850, zapper_data.max_y - 850)
 
 	sprite.size = Vector2(width, length)
 	sprite.position.y = -length / 2

@@ -13,13 +13,29 @@ normal = Vector2(0, 1)
 
 [sub_resource type="Resource" id="Resource_iywne"]
 script = ExtResource("4_iywne")
-rotation_speed = 180.0
 metadata/_custom_type_script = "uid://cq5c7mlhha0im"
 
 [sub_resource type="Resource" id="Resource_p57ef"]
 script = ExtResource("4_iywne")
-length = 540.0
-rotation_speed = 180.0
+length = 405.0
+metadata/_custom_type_script = "uid://cq5c7mlhha0im"
+
+[sub_resource type="Resource" id="Resource_u5sy4"]
+script = ExtResource("4_iywne")
+length = 135.0
+rotation = 0.0
+metadata/_custom_type_script = "uid://cq5c7mlhha0im"
+
+[sub_resource type="Resource" id="Resource_gee14"]
+script = ExtResource("4_iywne")
+length = 180.0
+rotation = 0.0
+metadata/_custom_type_script = "uid://cq5c7mlhha0im"
+
+[sub_resource type="Resource" id="Resource_0tnpc"]
+script = ExtResource("4_iywne")
+length = 180.0
+rotation_speed = 60.0
 metadata/_custom_type_script = "uid://cq5c7mlhha0im"
 
 [node name="Game" type="Node" unique_id=1898133290 groups=["game"]]
@@ -59,7 +75,7 @@ color = Color(0.275, 0.34249997, 0.5, 1)
 [node name="ObstacleManager" type="Node2D" parent="Level" unique_id=588243369]
 position = Vector2(2420, 1000)
 script = ExtResource("2_yqjtg")
-zapper_datas = Array[ExtResource("4_iywne")]([SubResource("Resource_iywne"), SubResource("Resource_p57ef")])
+zapper_datas = Array[ExtResource("4_iywne")]([SubResource("Resource_iywne"), SubResource("Resource_p57ef"), SubResource("Resource_u5sy4"), SubResource("Resource_gee14"), SubResource("Resource_0tnpc")])
 
 [node name="Zapper" parent="." unique_id=314017376 instance=ExtResource("4_lbhrr")]
 position = Vector2(920, 920)
