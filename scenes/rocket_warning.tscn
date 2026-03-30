@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://kg8ik52anvpi"]
+
+[ext_resource type="Script" uid="uid://c2enxoht1faw2" path="res://scripts/rocket_warning.gd" id="1_ql1be"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ql1be"]
+radius = 50.0
+
+[node name="RocketWarning" type="CharacterBody2D" unique_id=1525971597]
+script = ExtResource("1_ql1be")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1060737199]
+shape = SubResource("CircleShape2D_ql1be")
+
+[node name="Label" type="Label" parent="." unique_id=432825031]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -80.0
+offset_right = 20.0
+offset_bottom = 71.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 110
+text = "!"
+horizontal_alignment = 1
+vertical_alignment = 1

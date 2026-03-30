@@ -57,7 +57,7 @@ script = ExtResource("1_lnu2h")
 
 [node name="Level" type="Node2D" parent="." unique_id=790338961 groups=["level"]]
 
-[node name="Player" parent="Level" unique_id=851363322 instance=ExtResource("1_uwrxv")]
+[node name="Player" parent="Level" unique_id=851363322 groups=["player"] instance=ExtResource("1_uwrxv")]
 position = Vector2(530, 949)
 
 [node name="Ceiling" type="StaticBody2D" parent="Level" unique_id=676607325]

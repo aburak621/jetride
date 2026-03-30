@@ -1,0 +1,28 @@
+class_name RocketWarning extends CharacterBody2D
+
+signal timeout(y_position: float)
+
+@export var speed: float = 150
+
+@onready var player: Player = get_tree().get_first_node_in_group("player")
+
+var countdown: float = 2 # TODO: Add scaling by distance
+var timer: float = countdown
+
+
+func _ready() -> void:
+	global_position.x = 1770
+
+
+func _physics_process(delta: float) -> void:
+	timer -= delta
+	if timer <= 0:
+		timeout.emit(global_position.y)
+		queue_free()
+
+	var y_delta := player.global_position.y - global_position.y
+	if abs(y_delta) > 10:
+		velocity.y = sign(y_delta) * speed
+		move_and_slide()
+		global_position.x = 1770
+		global_position.y = clamp(global_position.y, 200, 950)

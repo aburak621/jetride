@@ -35,6 +35,7 @@ game=""
 level=""
 obstacle=""
 coin=""
+player=""
 
 [input]
 

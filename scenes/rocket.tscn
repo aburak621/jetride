@@ -3,9 +3,10 @@
 [ext_resource type="Script" uid="uid://c8ygkqpg1sjuu" path="res://scripts/rocket.gd" id="1_3341w"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_00dr1"]
-radius = 36.0
+radius = 32.0
 
-[node name="Rocket" type="Area2D" unique_id=269968630]
+[node name="Rocket" type="Area2D" unique_id=269968630 groups=["obstacle"]]
+collision_layer = 4
 script = ExtResource("1_3341w")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1808052849]
@@ -14,10 +15,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -36.0
-offset_top = -36.0
-offset_right = 36.0
-offset_bottom = 36.0
+offset_left = -50.0
+offset_top = -32.0
+offset_right = 50.0
+offset_bottom = 32.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 0.23000002, 0.23000002, 1)
