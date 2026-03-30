@@ -5,148 +5,151 @@
 [node name="coins_checker" type="Node2D" unique_id=438058302]
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1724651381]
-rect = Rect2(0, -140, 640, 240)
+rect = Rect2(0, -240, 640, 240)
 
-[node name="Coin" parent="." unique_id=1910314053 instance=ExtResource("1_qothn")]
-position = Vector2(20, -40)
+[node name="Group" type="Node2D" parent="." unique_id=1005928132]
+metadata/_edit_group_ = true
 
-[node name="Coin2" parent="." unique_id=1803999473 instance=ExtResource("1_qothn")]
-position = Vector2(20, -120)
+[node name="Coin" parent="Group" unique_id=1910314053 instance=ExtResource("1_qothn")]
+position = Vector2(20, -140)
 
-[node name="Coin3" parent="." unique_id=2016739309 instance=ExtResource("1_qothn")]
-position = Vector2(20, 40)
+[node name="Coin2" parent="Group" unique_id=1803999473 instance=ExtResource("1_qothn")]
+position = Vector2(20, -220)
 
-[node name="Coin4" parent="." unique_id=1347860899 instance=ExtResource("1_qothn")]
-position = Vector2(60, 0)
+[node name="Coin3" parent="Group" unique_id=2016739309 instance=ExtResource("1_qothn")]
+position = Vector2(20, -60)
 
-[node name="Coin5" parent="." unique_id=1913551055 instance=ExtResource("1_qothn")]
-position = Vector2(60, -80)
+[node name="Coin4" parent="Group" unique_id=1347860899 instance=ExtResource("1_qothn")]
+position = Vector2(60, -100)
 
-[node name="Coin6" parent="." unique_id=1146921065 instance=ExtResource("1_qothn")]
-position = Vector2(60, 80)
+[node name="Coin5" parent="Group" unique_id=1913551055 instance=ExtResource("1_qothn")]
+position = Vector2(60, -180)
 
-[node name="Coin7" parent="." unique_id=1557009471 instance=ExtResource("1_qothn")]
-position = Vector2(100, -40)
+[node name="Coin6" parent="Group" unique_id=1146921065 instance=ExtResource("1_qothn")]
+position = Vector2(60, -20)
 
-[node name="Coin8" parent="." unique_id=712897552 instance=ExtResource("1_qothn")]
-position = Vector2(100, -120)
+[node name="Coin7" parent="Group" unique_id=1557009471 instance=ExtResource("1_qothn")]
+position = Vector2(100, -140)
 
-[node name="Coin9" parent="." unique_id=1684467380 instance=ExtResource("1_qothn")]
-position = Vector2(100, 40)
+[node name="Coin8" parent="Group" unique_id=712897552 instance=ExtResource("1_qothn")]
+position = Vector2(100, -220)
 
-[node name="Coin10" parent="." unique_id=1712726578 instance=ExtResource("1_qothn")]
-position = Vector2(140, 0)
+[node name="Coin9" parent="Group" unique_id=1684467380 instance=ExtResource("1_qothn")]
+position = Vector2(100, -60)
 
-[node name="Coin11" parent="." unique_id=2115456362 instance=ExtResource("1_qothn")]
-position = Vector2(140, -80)
+[node name="Coin10" parent="Group" unique_id=1712726578 instance=ExtResource("1_qothn")]
+position = Vector2(140, -100)
 
-[node name="Coin12" parent="." unique_id=789102780 instance=ExtResource("1_qothn")]
-position = Vector2(140, 80)
+[node name="Coin11" parent="Group" unique_id=2115456362 instance=ExtResource("1_qothn")]
+position = Vector2(140, -180)
 
-[node name="Coin13" parent="." unique_id=2120314061 instance=ExtResource("1_qothn")]
-position = Vector2(180, -40)
+[node name="Coin12" parent="Group" unique_id=789102780 instance=ExtResource("1_qothn")]
+position = Vector2(140, -20)
 
-[node name="Coin14" parent="." unique_id=629020422 instance=ExtResource("1_qothn")]
-position = Vector2(180, -120)
+[node name="Coin13" parent="Group" unique_id=2120314061 instance=ExtResource("1_qothn")]
+position = Vector2(180, -140)
 
-[node name="Coin15" parent="." unique_id=1673352680 instance=ExtResource("1_qothn")]
-position = Vector2(180, 40)
+[node name="Coin14" parent="Group" unique_id=629020422 instance=ExtResource("1_qothn")]
+position = Vector2(180, -220)
 
-[node name="Coin16" parent="." unique_id=1946078172 instance=ExtResource("1_qothn")]
-position = Vector2(220, 0)
+[node name="Coin15" parent="Group" unique_id=1673352680 instance=ExtResource("1_qothn")]
+position = Vector2(180, -60)
 
-[node name="Coin17" parent="." unique_id=1758621065 instance=ExtResource("1_qothn")]
-position = Vector2(220, -80)
+[node name="Coin16" parent="Group" unique_id=1946078172 instance=ExtResource("1_qothn")]
+position = Vector2(220, -100)
 
-[node name="Coin18" parent="." unique_id=1529029265 instance=ExtResource("1_qothn")]
-position = Vector2(220, 80)
+[node name="Coin17" parent="Group" unique_id=1758621065 instance=ExtResource("1_qothn")]
+position = Vector2(220, -180)
 
-[node name="Coin19" parent="." unique_id=1301602135 instance=ExtResource("1_qothn")]
-position = Vector2(260, -40)
+[node name="Coin18" parent="Group" unique_id=1529029265 instance=ExtResource("1_qothn")]
+position = Vector2(220, -20)
 
-[node name="Coin20" parent="." unique_id=1846443605 instance=ExtResource("1_qothn")]
-position = Vector2(260, -120)
+[node name="Coin19" parent="Group" unique_id=1301602135 instance=ExtResource("1_qothn")]
+position = Vector2(260, -140)
 
-[node name="Coin21" parent="." unique_id=1788320394 instance=ExtResource("1_qothn")]
-position = Vector2(260, 40)
+[node name="Coin20" parent="Group" unique_id=1846443605 instance=ExtResource("1_qothn")]
+position = Vector2(260, -220)
 
-[node name="Coin22" parent="." unique_id=1186657454 instance=ExtResource("1_qothn")]
-position = Vector2(300, 0)
+[node name="Coin21" parent="Group" unique_id=1788320394 instance=ExtResource("1_qothn")]
+position = Vector2(260, -60)
 
-[node name="Coin23" parent="." unique_id=1838075787 instance=ExtResource("1_qothn")]
-position = Vector2(300, -80)
+[node name="Coin22" parent="Group" unique_id=1186657454 instance=ExtResource("1_qothn")]
+position = Vector2(300, -100)
 
-[node name="Coin24" parent="." unique_id=1162390400 instance=ExtResource("1_qothn")]
-position = Vector2(300, 80)
+[node name="Coin23" parent="Group" unique_id=1838075787 instance=ExtResource("1_qothn")]
+position = Vector2(300, -180)
 
-[node name="Coin25" parent="." unique_id=1081022790 instance=ExtResource("1_qothn")]
-position = Vector2(340, -40)
+[node name="Coin24" parent="Group" unique_id=1162390400 instance=ExtResource("1_qothn")]
+position = Vector2(300, -20)
 
-[node name="Coin26" parent="." unique_id=1382320287 instance=ExtResource("1_qothn")]
-position = Vector2(340, -120)
+[node name="Coin25" parent="Group" unique_id=1081022790 instance=ExtResource("1_qothn")]
+position = Vector2(340, -140)
 
-[node name="Coin27" parent="." unique_id=866973086 instance=ExtResource("1_qothn")]
-position = Vector2(340, 40)
+[node name="Coin26" parent="Group" unique_id=1382320287 instance=ExtResource("1_qothn")]
+position = Vector2(340, -220)
 
-[node name="Coin28" parent="." unique_id=592349783 instance=ExtResource("1_qothn")]
-position = Vector2(380, 0)
+[node name="Coin27" parent="Group" unique_id=866973086 instance=ExtResource("1_qothn")]
+position = Vector2(340, -60)
 
-[node name="Coin29" parent="." unique_id=2081532908 instance=ExtResource("1_qothn")]
-position = Vector2(380, -80)
+[node name="Coin28" parent="Group" unique_id=592349783 instance=ExtResource("1_qothn")]
+position = Vector2(380, -100)
 
-[node name="Coin30" parent="." unique_id=770141283 instance=ExtResource("1_qothn")]
-position = Vector2(380, 80)
+[node name="Coin29" parent="Group" unique_id=2081532908 instance=ExtResource("1_qothn")]
+position = Vector2(380, -180)
 
-[node name="Coin31" parent="." unique_id=1531510075 instance=ExtResource("1_qothn")]
-position = Vector2(420, -40)
+[node name="Coin30" parent="Group" unique_id=770141283 instance=ExtResource("1_qothn")]
+position = Vector2(380, -20)
 
-[node name="Coin32" parent="." unique_id=2065382012 instance=ExtResource("1_qothn")]
-position = Vector2(420, -120)
+[node name="Coin31" parent="Group" unique_id=1531510075 instance=ExtResource("1_qothn")]
+position = Vector2(420, -140)
 
-[node name="Coin33" parent="." unique_id=1593030732 instance=ExtResource("1_qothn")]
-position = Vector2(420, 40)
+[node name="Coin32" parent="Group" unique_id=2065382012 instance=ExtResource("1_qothn")]
+position = Vector2(420, -220)
 
-[node name="Coin34" parent="." unique_id=1533039121 instance=ExtResource("1_qothn")]
-position = Vector2(460, 0)
+[node name="Coin33" parent="Group" unique_id=1593030732 instance=ExtResource("1_qothn")]
+position = Vector2(420, -60)
 
-[node name="Coin35" parent="." unique_id=1432183474 instance=ExtResource("1_qothn")]
-position = Vector2(460, -80)
+[node name="Coin34" parent="Group" unique_id=1533039121 instance=ExtResource("1_qothn")]
+position = Vector2(460, -100)
 
-[node name="Coin36" parent="." unique_id=954718995 instance=ExtResource("1_qothn")]
-position = Vector2(460, 80)
+[node name="Coin35" parent="Group" unique_id=1432183474 instance=ExtResource("1_qothn")]
+position = Vector2(460, -180)
 
-[node name="Coin37" parent="." unique_id=973274719 instance=ExtResource("1_qothn")]
-position = Vector2(500, -40)
+[node name="Coin36" parent="Group" unique_id=954718995 instance=ExtResource("1_qothn")]
+position = Vector2(460, -20)
 
-[node name="Coin38" parent="." unique_id=183230002 instance=ExtResource("1_qothn")]
-position = Vector2(500, -120)
+[node name="Coin37" parent="Group" unique_id=973274719 instance=ExtResource("1_qothn")]
+position = Vector2(500, -140)
 
-[node name="Coin39" parent="." unique_id=2038594473 instance=ExtResource("1_qothn")]
-position = Vector2(500, 40)
+[node name="Coin38" parent="Group" unique_id=183230002 instance=ExtResource("1_qothn")]
+position = Vector2(500, -220)
 
-[node name="Coin40" parent="." unique_id=1027631965 instance=ExtResource("1_qothn")]
-position = Vector2(540, 0)
+[node name="Coin39" parent="Group" unique_id=2038594473 instance=ExtResource("1_qothn")]
+position = Vector2(500, -60)
 
-[node name="Coin41" parent="." unique_id=552399752 instance=ExtResource("1_qothn")]
-position = Vector2(540, -80)
+[node name="Coin40" parent="Group" unique_id=1027631965 instance=ExtResource("1_qothn")]
+position = Vector2(540, -100)
 
-[node name="Coin42" parent="." unique_id=1957113144 instance=ExtResource("1_qothn")]
-position = Vector2(540, 80)
+[node name="Coin41" parent="Group" unique_id=552399752 instance=ExtResource("1_qothn")]
+position = Vector2(540, -180)
 
-[node name="Coin43" parent="." unique_id=1446128377 instance=ExtResource("1_qothn")]
-position = Vector2(580, -40)
+[node name="Coin42" parent="Group" unique_id=1957113144 instance=ExtResource("1_qothn")]
+position = Vector2(540, -20)
 
-[node name="Coin44" parent="." unique_id=227072189 instance=ExtResource("1_qothn")]
-position = Vector2(580, -120)
+[node name="Coin43" parent="Group" unique_id=1446128377 instance=ExtResource("1_qothn")]
+position = Vector2(580, -140)
 
-[node name="Coin45" parent="." unique_id=1462970597 instance=ExtResource("1_qothn")]
-position = Vector2(580, 40)
+[node name="Coin44" parent="Group" unique_id=227072189 instance=ExtResource("1_qothn")]
+position = Vector2(580, -220)
 
-[node name="Coin46" parent="." unique_id=311679505 instance=ExtResource("1_qothn")]
-position = Vector2(620, 0)
+[node name="Coin45" parent="Group" unique_id=1462970597 instance=ExtResource("1_qothn")]
+position = Vector2(580, -60)
 
-[node name="Coin47" parent="." unique_id=246155234 instance=ExtResource("1_qothn")]
-position = Vector2(620, -80)
+[node name="Coin46" parent="Group" unique_id=311679505 instance=ExtResource("1_qothn")]
+position = Vector2(620, -100)
 
-[node name="Coin48" parent="." unique_id=1643257901 instance=ExtResource("1_qothn")]
-position = Vector2(620, 80)
+[node name="Coin47" parent="Group" unique_id=246155234 instance=ExtResource("1_qothn")]
+position = Vector2(620, -180)
+
+[node name="Coin48" parent="Group" unique_id=1643257901 instance=ExtResource("1_qothn")]
+position = Vector2(620, -20)

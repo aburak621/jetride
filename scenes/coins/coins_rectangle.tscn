@@ -5,130 +5,133 @@
 [node name="coins_rectangle" type="Node2D" unique_id=2056529234]
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=1868086337]
-rect = Rect2(0, -60, 560, 120)
+rect = Rect2(0, -120, 560, 120)
 
-[node name="Coin" parent="." unique_id=1910314053 instance=ExtResource("1_t4t15")]
-position = Vector2(20, 0)
+[node name="Group" type="Node2D" parent="." unique_id=928411626]
+metadata/_edit_group_ = true
 
-[node name="Coin2" parent="." unique_id=278966046 instance=ExtResource("1_t4t15")]
-position = Vector2(60, 0)
+[node name="Coin" parent="Group" unique_id=1910314053 instance=ExtResource("1_t4t15")]
+position = Vector2(20, -60)
 
-[node name="Coin3" parent="." unique_id=1361550551 instance=ExtResource("1_t4t15")]
-position = Vector2(100, 0)
+[node name="Coin2" parent="Group" unique_id=278966046 instance=ExtResource("1_t4t15")]
+position = Vector2(60, -60)
 
-[node name="Coin4" parent="." unique_id=301771630 instance=ExtResource("1_t4t15")]
-position = Vector2(140, 0)
+[node name="Coin3" parent="Group" unique_id=1361550551 instance=ExtResource("1_t4t15")]
+position = Vector2(100, -60)
 
-[node name="Coin5" parent="." unique_id=332485052 instance=ExtResource("1_t4t15")]
-position = Vector2(180, 0)
+[node name="Coin4" parent="Group" unique_id=301771630 instance=ExtResource("1_t4t15")]
+position = Vector2(140, -60)
 
-[node name="Coin6" parent="." unique_id=1096117972 instance=ExtResource("1_t4t15")]
-position = Vector2(220, 0)
+[node name="Coin5" parent="Group" unique_id=332485052 instance=ExtResource("1_t4t15")]
+position = Vector2(180, -60)
 
-[node name="Coin7" parent="." unique_id=718824557 instance=ExtResource("1_t4t15")]
-position = Vector2(260, 0)
+[node name="Coin6" parent="Group" unique_id=1096117972 instance=ExtResource("1_t4t15")]
+position = Vector2(220, -60)
 
-[node name="Coin8" parent="." unique_id=1849659592 instance=ExtResource("1_t4t15")]
-position = Vector2(300, 0)
+[node name="Coin7" parent="Group" unique_id=718824557 instance=ExtResource("1_t4t15")]
+position = Vector2(260, -60)
 
-[node name="Coin9" parent="." unique_id=240259928 instance=ExtResource("1_t4t15")]
-position = Vector2(340, 0)
+[node name="Coin8" parent="Group" unique_id=1849659592 instance=ExtResource("1_t4t15")]
+position = Vector2(300, -60)
 
-[node name="Coin10" parent="." unique_id=510561370 instance=ExtResource("1_t4t15")]
-position = Vector2(380, 0)
+[node name="Coin9" parent="Group" unique_id=240259928 instance=ExtResource("1_t4t15")]
+position = Vector2(340, -60)
 
-[node name="Coin11" parent="." unique_id=1013229742 instance=ExtResource("1_t4t15")]
-position = Vector2(420, 0)
+[node name="Coin10" parent="Group" unique_id=510561370 instance=ExtResource("1_t4t15")]
+position = Vector2(380, -60)
 
-[node name="Coin12" parent="." unique_id=650010338 instance=ExtResource("1_t4t15")]
-position = Vector2(460, 0)
+[node name="Coin11" parent="Group" unique_id=1013229742 instance=ExtResource("1_t4t15")]
+position = Vector2(420, -60)
 
-[node name="Coin13" parent="." unique_id=1833432048 instance=ExtResource("1_t4t15")]
-position = Vector2(500, 0)
+[node name="Coin12" parent="Group" unique_id=650010338 instance=ExtResource("1_t4t15")]
+position = Vector2(460, -60)
 
-[node name="Coin14" parent="." unique_id=164240367 instance=ExtResource("1_t4t15")]
-position = Vector2(540, 0)
+[node name="Coin13" parent="Group" unique_id=1833432048 instance=ExtResource("1_t4t15")]
+position = Vector2(500, -60)
 
-[node name="Coin15" parent="." unique_id=1034378809 instance=ExtResource("1_t4t15")]
-position = Vector2(20, -40)
+[node name="Coin14" parent="Group" unique_id=164240367 instance=ExtResource("1_t4t15")]
+position = Vector2(540, -60)
 
-[node name="Coin16" parent="." unique_id=1653503773 instance=ExtResource("1_t4t15")]
-position = Vector2(60, -40)
+[node name="Coin15" parent="Group" unique_id=1034378809 instance=ExtResource("1_t4t15")]
+position = Vector2(20, -100)
 
-[node name="Coin17" parent="." unique_id=1426865384 instance=ExtResource("1_t4t15")]
-position = Vector2(100, -40)
+[node name="Coin16" parent="Group" unique_id=1653503773 instance=ExtResource("1_t4t15")]
+position = Vector2(60, -100)
 
-[node name="Coin18" parent="." unique_id=2014357496 instance=ExtResource("1_t4t15")]
-position = Vector2(140, -40)
+[node name="Coin17" parent="Group" unique_id=1426865384 instance=ExtResource("1_t4t15")]
+position = Vector2(100, -100)
 
-[node name="Coin19" parent="." unique_id=163077596 instance=ExtResource("1_t4t15")]
-position = Vector2(180, -40)
+[node name="Coin18" parent="Group" unique_id=2014357496 instance=ExtResource("1_t4t15")]
+position = Vector2(140, -100)
 
-[node name="Coin20" parent="." unique_id=1039905401 instance=ExtResource("1_t4t15")]
-position = Vector2(220, -40)
+[node name="Coin19" parent="Group" unique_id=163077596 instance=ExtResource("1_t4t15")]
+position = Vector2(180, -100)
 
-[node name="Coin21" parent="." unique_id=665082367 instance=ExtResource("1_t4t15")]
-position = Vector2(260, -40)
+[node name="Coin20" parent="Group" unique_id=1039905401 instance=ExtResource("1_t4t15")]
+position = Vector2(220, -100)
 
-[node name="Coin22" parent="." unique_id=580493276 instance=ExtResource("1_t4t15")]
-position = Vector2(300, -40)
+[node name="Coin21" parent="Group" unique_id=665082367 instance=ExtResource("1_t4t15")]
+position = Vector2(260, -100)
 
-[node name="Coin23" parent="." unique_id=1644866711 instance=ExtResource("1_t4t15")]
-position = Vector2(340, -40)
+[node name="Coin22" parent="Group" unique_id=580493276 instance=ExtResource("1_t4t15")]
+position = Vector2(300, -100)
 
-[node name="Coin24" parent="." unique_id=1950205073 instance=ExtResource("1_t4t15")]
-position = Vector2(380, -40)
+[node name="Coin23" parent="Group" unique_id=1644866711 instance=ExtResource("1_t4t15")]
+position = Vector2(340, -100)
 
-[node name="Coin25" parent="." unique_id=512967843 instance=ExtResource("1_t4t15")]
-position = Vector2(420, -40)
+[node name="Coin24" parent="Group" unique_id=1950205073 instance=ExtResource("1_t4t15")]
+position = Vector2(380, -100)
 
-[node name="Coin26" parent="." unique_id=986307442 instance=ExtResource("1_t4t15")]
-position = Vector2(460, -40)
+[node name="Coin25" parent="Group" unique_id=512967843 instance=ExtResource("1_t4t15")]
+position = Vector2(420, -100)
 
-[node name="Coin27" parent="." unique_id=1828336649 instance=ExtResource("1_t4t15")]
-position = Vector2(500, -40)
+[node name="Coin26" parent="Group" unique_id=986307442 instance=ExtResource("1_t4t15")]
+position = Vector2(460, -100)
 
-[node name="Coin28" parent="." unique_id=1983835864 instance=ExtResource("1_t4t15")]
-position = Vector2(540, -40)
+[node name="Coin27" parent="Group" unique_id=1828336649 instance=ExtResource("1_t4t15")]
+position = Vector2(500, -100)
 
-[node name="Coin29" parent="." unique_id=1738792992 instance=ExtResource("1_t4t15")]
-position = Vector2(20, 40)
+[node name="Coin28" parent="Group" unique_id=1983835864 instance=ExtResource("1_t4t15")]
+position = Vector2(540, -100)
 
-[node name="Coin30" parent="." unique_id=1993974299 instance=ExtResource("1_t4t15")]
-position = Vector2(60, 40)
+[node name="Coin29" parent="Group" unique_id=1738792992 instance=ExtResource("1_t4t15")]
+position = Vector2(20, -20)
 
-[node name="Coin31" parent="." unique_id=460659017 instance=ExtResource("1_t4t15")]
-position = Vector2(100, 40)
+[node name="Coin30" parent="Group" unique_id=1993974299 instance=ExtResource("1_t4t15")]
+position = Vector2(60, -20)
 
-[node name="Coin32" parent="." unique_id=874287855 instance=ExtResource("1_t4t15")]
-position = Vector2(140, 40)
+[node name="Coin31" parent="Group" unique_id=460659017 instance=ExtResource("1_t4t15")]
+position = Vector2(100, -20)
 
-[node name="Coin33" parent="." unique_id=1017822325 instance=ExtResource("1_t4t15")]
-position = Vector2(180, 40)
+[node name="Coin32" parent="Group" unique_id=874287855 instance=ExtResource("1_t4t15")]
+position = Vector2(140, -20)
 
-[node name="Coin34" parent="." unique_id=941270881 instance=ExtResource("1_t4t15")]
-position = Vector2(220, 40)
+[node name="Coin33" parent="Group" unique_id=1017822325 instance=ExtResource("1_t4t15")]
+position = Vector2(180, -20)
 
-[node name="Coin35" parent="." unique_id=1566580632 instance=ExtResource("1_t4t15")]
-position = Vector2(260, 40)
+[node name="Coin34" parent="Group" unique_id=941270881 instance=ExtResource("1_t4t15")]
+position = Vector2(220, -20)
 
-[node name="Coin36" parent="." unique_id=2027480478 instance=ExtResource("1_t4t15")]
-position = Vector2(300, 40)
+[node name="Coin35" parent="Group" unique_id=1566580632 instance=ExtResource("1_t4t15")]
+position = Vector2(260, -20)
 
-[node name="Coin37" parent="." unique_id=1261257202 instance=ExtResource("1_t4t15")]
-position = Vector2(340, 40)
+[node name="Coin36" parent="Group" unique_id=2027480478 instance=ExtResource("1_t4t15")]
+position = Vector2(300, -20)
 
-[node name="Coin38" parent="." unique_id=530781692 instance=ExtResource("1_t4t15")]
-position = Vector2(380, 40)
+[node name="Coin37" parent="Group" unique_id=1261257202 instance=ExtResource("1_t4t15")]
+position = Vector2(340, -20)
 
-[node name="Coin39" parent="." unique_id=687245256 instance=ExtResource("1_t4t15")]
-position = Vector2(420, 40)
+[node name="Coin38" parent="Group" unique_id=530781692 instance=ExtResource("1_t4t15")]
+position = Vector2(380, -20)
 
-[node name="Coin40" parent="." unique_id=1542028641 instance=ExtResource("1_t4t15")]
-position = Vector2(460, 40)
+[node name="Coin39" parent="Group" unique_id=687245256 instance=ExtResource("1_t4t15")]
+position = Vector2(420, -20)
 
-[node name="Coin41" parent="." unique_id=1605319504 instance=ExtResource("1_t4t15")]
-position = Vector2(500, 40)
+[node name="Coin40" parent="Group" unique_id=1542028641 instance=ExtResource("1_t4t15")]
+position = Vector2(460, -20)
 
-[node name="Coin42" parent="." unique_id=1999728899 instance=ExtResource("1_t4t15")]
-position = Vector2(540, 40)
+[node name="Coin41" parent="Group" unique_id=1605319504 instance=ExtResource("1_t4t15")]
+position = Vector2(500, -20)
+
+[node name="Coin42" parent="Group" unique_id=1999728899 instance=ExtResource("1_t4t15")]
+position = Vector2(540, -20)

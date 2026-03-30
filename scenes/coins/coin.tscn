@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://oakwo6q7sroe" path="res://scripts/coin.gd" id="1_dwuvv"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_xs80l"]
-radius = 20.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dwuvv"]
+size = Vector2(40, 40)
 
 [node name="Coin" type="Area2D" unique_id=1910314053 groups=["coin"]]
 collision_layer = 8
@@ -24,4 +24,4 @@ grow_vertical = 2
 color = Color(1, 0.92300004, 0.23000002, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1668497859]
-shape = SubResource("CircleShape2D_xs80l")
+shape = SubResource("RectangleShape2D_dwuvv")

@@ -1,5 +1,5 @@
-- [ ] Lasers
+- [*] Coin spawns
 - [ ] Rockets
+- [ ] Lasers
 - [ ] Visuals
-- [ ] Coin spawns
 

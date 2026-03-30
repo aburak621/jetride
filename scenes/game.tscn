@@ -4,6 +4,12 @@
 [ext_resource type="PackedScene" uid="uid://n6l81yqmjqpo" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://cn2ygb0syg880" path="res://scripts/obstacle_manager.gd" id="2_yqjtg"]
 [ext_resource type="Script" uid="uid://cq5c7mlhha0im" path="res://scripts/zapper_data.gd" id="4_iywne"]
+[ext_resource type="PackedScene" uid="uid://dy8uq13o750r4" path="res://scenes/coins/coins_checker.tscn" id="5_0tnpc"]
+[ext_resource type="PackedScene" uid="uid://swtl5eo4dlos" path="res://scenes/coins/coins_coins.tscn" id="6_vtaks"]
+[ext_resource type="PackedScene" uid="uid://jyssm7oqjo0b" path="res://scenes/coins/coins_line.tscn" id="7_kvpfn"]
+[ext_resource type="PackedScene" uid="uid://bvl7v845xik8b" path="res://scenes/coins/coins_pills_up.tscn" id="8_dinhu"]
+[ext_resource type="PackedScene" uid="uid://dg2ks5hqadlc8" path="res://scenes/coins/coins_pills_down.tscn" id="8_vtaks"]
+[ext_resource type="PackedScene" uid="uid://dhdhfmuwudalw" path="res://scenes/coins/coins_rectangle.tscn" id="9_kvuet"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yqjtg"]
 normal = Vector2(0, 1)
@@ -84,3 +90,4 @@ color = Color(0.275, 0.34249997, 0.5, 1)
 position = Vector2(2420, 1000)
 script = ExtResource("2_yqjtg")
 zapper_datas = Array[ExtResource("4_iywne")]([SubResource("Resource_iywne"), SubResource("Resource_u5sy4"), SubResource("Resource_p57ef"), SubResource("Resource_gee14"), SubResource("Resource_0tnpc"), SubResource("Resource_vtaks"), SubResource("Resource_kvpfn")])
+coin_scenes = Array[PackedScene]([ExtResource("5_0tnpc"), ExtResource("6_vtaks"), ExtResource("7_kvpfn"), ExtResource("8_vtaks"), ExtResource("8_dinhu"), ExtResource("9_kvuet")])
