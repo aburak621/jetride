@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://n6l81yqmjqpo" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://cn2ygb0syg880" path="res://scripts/obstacle_manager.gd" id="2_yqjtg"]
 [ext_resource type="Script" uid="uid://cq5c7mlhha0im" path="res://scripts/zapper_data.gd" id="4_iywne"]
-[ext_resource type="PackedScene" uid="uid://d0o5g2dq2syid" path="res://scenes/zapper.tscn" id="4_lbhrr"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yqjtg"]
 normal = Vector2(0, 1)
@@ -15,15 +14,14 @@ normal = Vector2(0, 1)
 script = ExtResource("4_iywne")
 metadata/_custom_type_script = "uid://cq5c7mlhha0im"
 
+[sub_resource type="Resource" id="Resource_u5sy4"]
+script = ExtResource("4_iywne")
+rotation = 0.0
+metadata/_custom_type_script = "uid://cq5c7mlhha0im"
+
 [sub_resource type="Resource" id="Resource_p57ef"]
 script = ExtResource("4_iywne")
 length = 405.0
-metadata/_custom_type_script = "uid://cq5c7mlhha0im"
-
-[sub_resource type="Resource" id="Resource_u5sy4"]
-script = ExtResource("4_iywne")
-length = 135.0
-rotation = 0.0
 metadata/_custom_type_script = "uid://cq5c7mlhha0im"
 
 [sub_resource type="Resource" id="Resource_gee14"]
@@ -34,8 +32,18 @@ metadata/_custom_type_script = "uid://cq5c7mlhha0im"
 
 [sub_resource type="Resource" id="Resource_0tnpc"]
 script = ExtResource("4_iywne")
-length = 180.0
 rotation_speed = 60.0
+metadata/_custom_type_script = "uid://cq5c7mlhha0im"
+
+[sub_resource type="Resource" id="Resource_vtaks"]
+script = ExtResource("4_iywne")
+length = 180.0
+rotation = 45.0
+metadata/_custom_type_script = "uid://cq5c7mlhha0im"
+
+[sub_resource type="Resource" id="Resource_kvpfn"]
+script = ExtResource("4_iywne")
+rotation = 45.0
 metadata/_custom_type_script = "uid://cq5c7mlhha0im"
 
 [node name="Game" type="Node" unique_id=1898133290 groups=["game"]]
@@ -75,7 +83,4 @@ color = Color(0.275, 0.34249997, 0.5, 1)
 [node name="ObstacleManager" type="Node2D" parent="Level" unique_id=588243369]
 position = Vector2(2420, 1000)
 script = ExtResource("2_yqjtg")
-zapper_datas = Array[ExtResource("4_iywne")]([SubResource("Resource_iywne"), SubResource("Resource_p57ef"), SubResource("Resource_u5sy4"), SubResource("Resource_gee14"), SubResource("Resource_0tnpc")])
-
-[node name="Zapper" parent="." unique_id=314017376 instance=ExtResource("4_lbhrr")]
-position = Vector2(920, 920)
+zapper_datas = Array[ExtResource("4_iywne")]([SubResource("Resource_iywne"), SubResource("Resource_u5sy4"), SubResource("Resource_p57ef"), SubResource("Resource_gee14"), SubResource("Resource_0tnpc"), SubResource("Resource_vtaks"), SubResource("Resource_kvpfn")])

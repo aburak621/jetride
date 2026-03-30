@@ -20,7 +20,7 @@ var max_y: float = 760
 
 
 func update_properties() -> void:
-	x_offset = length * (abs(sin(deg_to_rad(rotation))) if rotation_speed == 0 else 1) / 2
+	x_offset = max(length * (abs(sin(deg_to_rad(rotation))) if rotation_speed == 0 else 1) / 2, 30)
 	var half_height: float = length * (abs(cos(deg_to_rad(rotation))) if rotation_speed == 0 else 1) / 2
 	min_y = half_height + 30
 	max_y = 850 - half_height - 30
