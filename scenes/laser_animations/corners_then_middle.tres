@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="LaserAnimation" format=3 uid="uid://bq6264xf3p7pj"]
+
+[ext_resource type="Script" uid="uid://biocssi7fcn1x" path="res://scripts/laser_flags.gd" id="1_ijh5m"]
+[ext_resource type="Script" uid="uid://ci8wlmg6e3j1x" path="res://scripts/laser_animation.gd" id="2_68u6e"]
+
+[sub_resource type="Resource" id="Resource_5bevk"]
+script = ExtResource("1_ijh5m")
+flags = 99
+metadata/_custom_type_script = "uid://biocssi7fcn1x"
+
+[sub_resource type="Resource" id="Resource_qcfuy"]
+script = ExtResource("1_ijh5m")
+flags = 28
+metadata/_custom_type_script = "uid://biocssi7fcn1x"
+
+[resource]
+script = ExtResource("2_68u6e")
+keyframes = Dictionary[float, ExtResource("1_ijh5m")]({
+0.0: SubResource("Resource_5bevk"),
+2.0: SubResource("Resource_qcfuy")
+})
+metadata/_custom_type_script = "uid://ci8wlmg6e3j1x"

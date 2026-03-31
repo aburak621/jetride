@@ -6,6 +6,7 @@ class_name ObstacleManager extends Node2D
 @onready var game: Game = get_tree().get_first_node_in_group("game")
 @onready var player: Player = get_tree().get_first_node_in_group("player")
 @onready var initial_game_speed: float = game.game_speed
+@onready var laser_array: LaserArray = %LaserArray
 
 const zapper_scene: PackedScene = preload("uid://d0o5g2dq2syid")
 const chunk_scene: PackedScene = preload("uid://e2w3n5bk75je")
@@ -63,6 +64,10 @@ func spawn_rocket(y_position: float) -> void:
 	get_parent().add_child(rocket)
 
 
+func spawn_lasers() -> void:
+	laser_array.activate_lasers()
+
+
 func generate_new_spacing() -> void:
 	spacing = (
 		[1.5, 2, 2.5].pick_random()
@@ -78,4 +83,5 @@ func spawn_chunk() -> void:
 	# spawn_zappers(40, chunk)
 	# spawn_coins(40, chunk)
 	await get_tree().process_frame
+	spawn_lasers()
 	spawn_rocket_warnings(40)

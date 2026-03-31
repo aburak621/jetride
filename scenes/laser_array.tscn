@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://c6r6tain1mce6"]
+
+[ext_resource type="Script" uid="uid://cssfqa138l8so" path="res://scripts/laser_array.gd" id="1_a4lsg"]
+[ext_resource type="PackedScene" uid="uid://cjd4aubbc0i5e" path="res://scenes/laser.tscn" id="1_ji5gi"]
+[ext_resource type="Script" uid="uid://ci8wlmg6e3j1x" path="res://scripts/laser_animation.gd" id="2_5bevk"]
+[ext_resource type="Resource" uid="uid://bq6264xf3p7pj" path="res://scenes/laser_animations/corners_then_middle.tres" id="3_0e4ip"]
+[ext_resource type="Resource" uid="uid://50l4ycwyi5dd" path="res://scenes/laser_animations/corners.tres" id="4_7oehr"]
+[ext_resource type="Resource" uid="uid://cvhatqx12qigx" path="res://scenes/laser_animations/upper_then_lower_staggered.tres" id="5_qg0b0"]
+
+[node name="LaserArray" type="Node2D" unique_id=842424462]
+script = ExtResource("1_a4lsg")
+laser_array_data = Array[ExtResource("2_5bevk")]([ExtResource("3_0e4ip"), ExtResource("4_7oehr"), ExtResource("5_qg0b0")])
+
+[node name="Laser" parent="." unique_id=488782960 instance=ExtResource("1_ji5gi")]
+position = Vector2(960, 200)
+
+[node name="Laser2" parent="." unique_id=253733017 instance=ExtResource("1_ji5gi")]
+position = Vector2(960, 325)
+
+[node name="Laser3" parent="." unique_id=1773722277 instance=ExtResource("1_ji5gi")]
+position = Vector2(960, 450)
+
+[node name="Laser4" parent="." unique_id=1047915994 instance=ExtResource("1_ji5gi")]
+position = Vector2(960, 575)
+
+[node name="Laser5" parent="." unique_id=179549836 instance=ExtResource("1_ji5gi")]
+position = Vector2(960, 700)
+
+[node name="Laser6" parent="." unique_id=1351152801 instance=ExtResource("1_ji5gi")]
+position = Vector2(960, 825)
+
+[node name="Laser7" parent="." unique_id=310436406 instance=ExtResource("1_ji5gi")]
+position = Vector2(960, 950)

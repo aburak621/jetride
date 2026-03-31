@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="LaserAnimation" format=3 uid="uid://50l4ycwyi5dd"]
+
+[ext_resource type="Script" uid="uid://biocssi7fcn1x" path="res://scripts/laser_flags.gd" id="1_hqgea"]
+[ext_resource type="Script" uid="uid://ci8wlmg6e3j1x" path="res://scripts/laser_animation.gd" id="2_gdwjb"]
+
+[sub_resource type="Resource" id="Resource_7oehr"]
+script = ExtResource("1_hqgea")
+flags = 65
+metadata/_custom_type_script = "uid://biocssi7fcn1x"
+
+[resource]
+script = ExtResource("2_gdwjb")
+keyframes = Dictionary[float, ExtResource("1_hqgea")]({
+0.0: SubResource("Resource_7oehr")
+})
+metadata/_custom_type_script = "uid://ci8wlmg6e3j1x"

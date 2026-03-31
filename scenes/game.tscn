@@ -10,6 +10,11 @@
 [ext_resource type="PackedScene" uid="uid://bvl7v845xik8b" path="res://scenes/coins/coins_pills_up.tscn" id="8_dinhu"]
 [ext_resource type="PackedScene" uid="uid://dg2ks5hqadlc8" path="res://scenes/coins/coins_pills_down.tscn" id="8_vtaks"]
 [ext_resource type="PackedScene" uid="uid://dhdhfmuwudalw" path="res://scenes/coins/coins_rectangle.tscn" id="9_kvuet"]
+[ext_resource type="PackedScene" uid="uid://c6r6tain1mce6" path="res://scenes/laser_array.tscn" id="11_kvpfn"]
+[ext_resource type="Script" uid="uid://ci8wlmg6e3j1x" path="res://scripts/laser_animation.gd" id="12_kvuet"]
+[ext_resource type="Resource" uid="uid://50l4ycwyi5dd" path="res://scenes/laser_animations/corners.tres" id="13_ir15t"]
+[ext_resource type="Resource" uid="uid://bq6264xf3p7pj" path="res://scenes/laser_animations/corners_then_middle.tres" id="14_ca42v"]
+[ext_resource type="Resource" uid="uid://cvhatqx12qigx" path="res://scenes/laser_animations/upper_then_lower_staggered.tres" id="15_rysoc"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yqjtg"]
 normal = Vector2(0, 1)
@@ -91,3 +96,8 @@ position = Vector2(2420, 1000)
 script = ExtResource("2_yqjtg")
 zapper_datas = Array[ExtResource("4_iywne")]([SubResource("Resource_iywne"), SubResource("Resource_u5sy4"), SubResource("Resource_p57ef"), SubResource("Resource_gee14"), SubResource("Resource_0tnpc"), SubResource("Resource_vtaks"), SubResource("Resource_kvpfn")])
 coin_scenes = Array[PackedScene]([ExtResource("5_0tnpc"), ExtResource("6_vtaks"), ExtResource("7_kvpfn"), ExtResource("8_vtaks"), ExtResource("8_dinhu"), ExtResource("9_kvuet")])
+
+[node name="LaserArray" parent="Level" unique_id=842424462 instance=ExtResource("11_kvpfn")]
+unique_name_in_owner = true
+visible = false
+laser_array_data = Array[ExtResource("12_kvuet")]([ExtResource("13_ir15t"), ExtResource("14_ca42v"), ExtResource("15_rysoc")])
