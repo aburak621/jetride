@@ -13,10 +13,21 @@ const chunk_scene: PackedScene = preload("uid://e2w3n5bk75je")
 const rocket_warning_scene: PackedScene = preload("uid://kg8ik52anvpi")
 const rocket_scene: PackedScene = preload("uid://b6kibjr7qb5gl")
 var spacing: float
+var chunk_spacing: float
+var distance_until_next_chunk: float = 100
 
 
-func _ready() -> void:
-	spawn_chunk()
+func _physics_process(delta: float) -> void:
+	distance_until_next_chunk -= game.game_speed * delta
+
+	if distance_until_next_chunk <= 0:
+		chunk_spacing = (
+			[0, 1, 1.5, 2].pick_random()
+			* 480
+			* remap(game.game_speed, initial_game_speed, game.max_game_speed, 1, 3)
+		)
+		var last_chunk := spawn_chunk()
+		distance_until_next_chunk += last_chunk.chunk_width + chunk_spacing
 
 
 func spawn_zappers(count: int, chunk: Chunk) -> void:
@@ -40,7 +51,9 @@ func spawn_coins(count: int, chunk: Chunk) -> void:
 		var coin_scene: PackedScene = coin_scenes.pick_random()
 		var coins := coin_scene.instantiate() as Node2D
 		chunk.add_child(coins)
-		var coins_size: Vector2 = (coins.get_node("VisibleOnScreenNotifier2D") as VisibleOnScreenNotifier2D).rect.size
+		var coins_size: Vector2 = (
+			(coins.get_node("VisibleOnScreenNotifier2D") as VisibleOnScreenNotifier2D).rect.size
+		)
 		coins.position.x += spawn_point.x
 		spawn_point.x += coins_size.x
 		spawn_point.x += spacing * remap(coins_size.x, 560, 1400, 1, 1.5)
@@ -51,10 +64,12 @@ func spawn_coins(count: int, chunk: Chunk) -> void:
 func spawn_rocket_warnings(count: int) -> void:
 	for i in count:
 		var rocket_warning := rocket_warning_scene.instantiate() as RocketWarning
-		rocket_warning.global_position = Vector2(1770, player.global_position.y + sign(575 - player.global_position.y) * 11)
+		rocket_warning.global_position = Vector2(
+			1770, player.global_position.y + sign(575 - player.global_position.y) * 11
+		)
 		get_parent().add_child(rocket_warning)
 		rocket_warning.timeout.connect(spawn_rocket)
-		await get_tree().create_timer(0.38).timeout # TODO: Might randomize rocket spawn intervals.
+		await get_tree().create_timer(0.38).timeout  # TODO: Might randomize rocket spawn intervals.
 
 
 func spawn_rocket(y_position: float) -> void:
@@ -64,8 +79,9 @@ func spawn_rocket(y_position: float) -> void:
 	get_parent().add_child(rocket)
 
 
-func spawn_lasers() -> void:
-	laser_array.activate_lasers()
+func spawn_lasers(chunk: Chunk) -> void:
+	var delay := laser_array.activate_lasers() * game.game_speed
+	chunk.set_chunk_width(delay)
 
 
 func generate_new_spacing() -> void:
@@ -76,12 +92,38 @@ func generate_new_spacing() -> void:
 	)
 
 
-func spawn_chunk() -> void:
+func spawn_chunk() -> Chunk:
 	var chunk: Chunk = chunk_scene.instantiate()
 	add_child(chunk)
 	chunk.global_position.y = global_position.y
-	# spawn_zappers(40, chunk)
-	# spawn_coins(40, chunk)
-	await get_tree().process_frame
-	spawn_lasers()
-	spawn_rocket_warnings(40)
+
+	var random_roll := randf()
+	if random_roll <= 0.7:
+		spawn_zappers(
+			floor(
+				(
+					randi_range(1, 4)
+					* randf_range(
+						clamp(game.difficulty_scaling / 2, 1, game.difficulty_scaling),
+						game.difficulty_scaling
+					)
+				)
+			),
+			chunk
+		)
+	elif random_roll <= 0.95:
+		spawn_coins(
+			floor(randi_range(1, 3) * clamp(randf_range(1, game.difficulty_scaling), 1, 2)), chunk
+		)
+	elif random_roll <= 1:
+		spawn_lasers(chunk)
+
+	if randf() <= 0.1:
+		if randf() <= 0.05:
+			spawn_rocket_warnings(8)
+		else:
+			spawn_rocket_warnings(
+				floor(randi_range(1, 3) * clamp(randf_range(1, game.difficulty_scaling), 1, 2))
+			)
+
+	return chunk

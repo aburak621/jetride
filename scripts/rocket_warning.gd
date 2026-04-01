@@ -2,7 +2,7 @@ class_name RocketWarning extends CharacterBody2D
 
 signal timeout(y_position: float)
 
-@export var speed: float = 150
+@export var speed: float = 200
 
 @onready var player: Player = get_tree().get_first_node_in_group("player")
 

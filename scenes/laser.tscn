@@ -156,7 +156,7 @@ tracks/5/keys = {
 
 [sub_resource type="Animation" id="Animation_a7dhc"]
 resource_name = "enter"
-length = 0.5
+length = 2.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -164,7 +164,7 @@ tracks/0/path = NodePath("ColorRect:position")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
+"times": PackedFloat32Array(2, 2.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(-1000, -20), Vector2(-840, -20)]
@@ -176,17 +176,46 @@ tracks/1/path = NodePath("ColorRect2:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5),
+"times": PackedFloat32Array(2, 2.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(960, -20), Vector2(800, -20)]
+}
+
+[sub_resource type="Animation" id="Animation_jjj73"]
+resource_name = "enter"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-840, -20), Vector2(-1000, -20)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(800, -20), Vector2(960, -20)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_a7dhc"]
 _data = {
 &"RESET": SubResource("Animation_5no5p"),
 &"activate": SubResource("Animation_xmihv"),
-&"enter": SubResource("Animation_a7dhc")
+&"enter": SubResource("Animation_a7dhc"),
+&"exit": SubResource("Animation_jjj73")
 }
 
 [node name="Laser" type="Node2D" unique_id=488782960]
