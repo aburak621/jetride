@@ -21,7 +21,10 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_cancel"):
 		get_tree().quit()
 
-	velocity.y += gravity * delta
+	if velocity.y > 0 and velocity.y < 300: # TODO: Trick to make movement feel heavier.
+		velocity.y += gravity * delta * 0.5
+	else:
+		velocity.y += gravity * delta
 
 	if is_on_floor():
 		velocity.y = 0
