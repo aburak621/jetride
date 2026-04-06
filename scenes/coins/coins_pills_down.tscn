@@ -10,7 +10,8 @@ rect = Rect2(0, -400, 1040, 400)
 [node name="Group" type="Node2D" parent="." unique_id=1631049767]
 metadata/_edit_group_ = true
 
-[node name="Coin" parent="Group" unique_id=1910314053 instance=ExtResource("1_lqkt5")]
+[node name="FirstCoin" parent="Group" unique_id=1910314053 instance=ExtResource("1_lqkt5")]
+unique_name_in_owner = true
 position = Vector2(20, -340)
 
 [node name="Coin2" parent="Group" unique_id=1809473989 instance=ExtResource("1_lqkt5")]

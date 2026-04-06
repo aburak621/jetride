@@ -1,6 +1,83 @@
 [gd_scene format=3 uid="uid://tj34y60mtf1t"]
 
 [ext_resource type="Script" uid="uid://oakwo6q7sroe" path="res://scripts/coin.gd" id="1_dwuvv"]
+[ext_resource type="Texture2D" uid="uid://bqbnpri7ds4o" path="res://sprites/coin.png" id="2_4c2kx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nk337"]
+atlas = ExtResource("2_4c2kx")
+region = Rect2(20, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_juj78"]
+atlas = ExtResource("2_4c2kx")
+region = Rect2(40, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jx2qo"]
+atlas = ExtResource("2_4c2kx")
+region = Rect2(60, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n00w2"]
+atlas = ExtResource("2_4c2kx")
+region = Rect2(80, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cmyam"]
+atlas = ExtResource("2_4c2kx")
+region = Rect2(100, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5d2hv"]
+atlas = ExtResource("2_4c2kx")
+region = Rect2(120, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ey17f"]
+atlas = ExtResource("2_4c2kx")
+region = Rect2(140, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_44tal"]
+atlas = ExtResource("2_4c2kx")
+region = Rect2(160, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4c2kx"]
+atlas = ExtResource("2_4c2kx")
+region = Rect2(0, 0, 20, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_44tal"]
+animations = [{
+"frames": [{
+"duration": 4.0,
+"texture": SubResource("AtlasTexture_nk337")
+}, {
+"duration": 4.0,
+"texture": SubResource("AtlasTexture_juj78")
+}, {
+"duration": 4.0,
+"texture": SubResource("AtlasTexture_jx2qo")
+}, {
+"duration": 4.0,
+"texture": SubResource("AtlasTexture_n00w2")
+}, {
+"duration": 4.0,
+"texture": SubResource("AtlasTexture_cmyam")
+}, {
+"duration": 4.0,
+"texture": SubResource("AtlasTexture_5d2hv")
+}, {
+"duration": 4.0,
+"texture": SubResource("AtlasTexture_ey17f")
+}, {
+"duration": 4.0,
+"texture": SubResource("AtlasTexture_44tal")
+}],
+"loop": false,
+"name": &"flip",
+"speed": 60.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4c2kx")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dwuvv"]
 size = Vector2(40, 40)
@@ -9,19 +86,11 @@ size = Vector2(40, 40)
 collision_layer = 8
 script = ExtResource("1_dwuvv")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1427307661]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(1, 0.92300004, 0.23000002, 1)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=61460816]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_44tal")
+animation = &"flip"
+autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1668497859]
 shape = SubResource("RectangleShape2D_dwuvv")

@@ -52,7 +52,8 @@ position = Vector2(500, -60)
 [node name="Coin14" parent="Group" unique_id=164240367 instance=ExtResource("1_t4t15")]
 position = Vector2(540, -60)
 
-[node name="Coin15" parent="Group" unique_id=1034378809 instance=ExtResource("1_t4t15")]
+[node name="FirstCoin" parent="Group" unique_id=1034378809 instance=ExtResource("1_t4t15")]
+unique_name_in_owner = true
 position = Vector2(20, -100)
 
 [node name="Coin16" parent="Group" unique_id=1653503773 instance=ExtResource("1_t4t15")]

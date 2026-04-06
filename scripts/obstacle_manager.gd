@@ -58,6 +58,24 @@ func spawn_coins(count: int, chunk: Chunk) -> void:
 		spawn_point.x += coins_size.x
 		spawn_point.x += spacing * remap(coins_size.x, 560, 1400, 1, 1.5)
 		coins.position.y = -(randf_range(0, 750 - coins_size.y) + 50)
+
+		# Flip animation
+		var first_coin_position := (coins.get_node("%FirstCoin") as Coin).position
+		var delay := (coins.global_position.x - 1920) / game.game_speed + randf_range(0, 0.5)
+		for child in coins.find_children("*"):
+			if not child.is_in_group("coin"):
+				continue
+			var coin := child as Coin
+			var distance := coin.position - first_coin_position
+			var grid_distance: int = roundi((distance.x + distance.y) / 40)
+			var coin_ref: WeakRef = weakref(coin)
+			get_tree().create_timer(grid_distance * 0.05 + delay).timeout.connect(
+				func() -> void:
+					var weak_coin := coin_ref.get_ref() as Coin
+					if weak_coin:
+						weak_coin.sprite.play("flip")
+			)
+
 	chunk.set_chunk_width(spawn_point.x)
 
 
@@ -123,7 +141,7 @@ func spawn_chunk() -> Chunk:
 			spawn_rocket_warnings(8)
 		else:
 			spawn_rocket_warnings(
-				floor(randi_range(1, 3) * clamp(randf_range(1, game.difficulty_scaling), 1, 2))
+				floor(randi_range(1, 3) * clamp(floor(randf_range(1, game.difficulty_scaling)), 1, 2))
 			)
 
 	return chunk

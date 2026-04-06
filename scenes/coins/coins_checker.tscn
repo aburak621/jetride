@@ -13,7 +13,8 @@ metadata/_edit_group_ = true
 [node name="Coin" parent="Group" unique_id=1910314053 instance=ExtResource("1_qothn")]
 position = Vector2(20, -140)
 
-[node name="Coin2" parent="Group" unique_id=1803999473 instance=ExtResource("1_qothn")]
+[node name="FirstCoin" parent="Group" unique_id=1803999473 instance=ExtResource("1_qothn")]
+unique_name_in_owner = true
 position = Vector2(20, -220)
 
 [node name="Coin3" parent="Group" unique_id=2016739309 instance=ExtResource("1_qothn")]
