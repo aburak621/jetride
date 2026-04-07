@@ -1,6 +1,65 @@
 [gd_scene format=3 uid="uid://d0o5g2dq2syid"]
 
 [ext_resource type="Script" uid="uid://c21vdy7qygtn2" path="res://scripts/zapper.gd" id="1_iivta"]
+[ext_resource type="Texture2D" uid="uid://dqawa2v3jupq5" path="res://sprites/zapper.png" id="2_rwb7l"]
+
+[sub_resource type="Shader" id="Shader_rwb7l"]
+resource_local_to_scene = true
+code = "shader_type canvas_item;
+
+uniform vec2 direction;
+uniform float speed;
+uniform vec2 tiling = vec2(1.0, 1.0); // Add this for scale control
+varying vec4 modulate;
+
+void vertex(){
+    modulate = COLOR;
+}
+
+void fragment(){
+    vec2 move = direction * TIME * speed;
+    // Multiply UV by tiling first, then add movement
+    vec2 moved_uv = (UV * tiling) + move;
+    
+    COLOR = texture(TEXTURE, moved_uv) * modulate;
+}"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rwb7l"]
+resource_local_to_scene = true
+shader = SubResource("Shader_rwb7l")
+shader_parameter/direction = Vector2(-1, 0)
+shader_parameter/speed = 1.5
+shader_parameter/tiling = Vector2(1, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tgqbo"]
+atlas = ExtResource("2_rwb7l")
+region = Rect2(0, 76, 76, 76)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vqi1j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tgqbo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rwb7l"]
+atlas = ExtResource("2_rwb7l")
+region = Rect2(0, 152, 76, 76)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j683x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rwb7l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 60.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a7dhc"]
 resource_local_to_scene = true
@@ -13,19 +72,24 @@ collision_layer = 4
 collision_mask = 0
 script = ExtResource("1_iivta")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1042358975]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -30.0
-offset_top = -135.0
-offset_right = 30.0
-offset_bottom = 135.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(1, 0.35833335, 0.23000002, 1)
+[node name="Beam" type="AnimatedSprite2D" parent="." unique_id=1090398127]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_rwb7l")
+rotation = 1.5707964
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_vqi1j")
+
+[node name="LeftSprite" type="AnimatedSprite2D" parent="." unique_id=1029970300]
+position = Vector2(0, 94)
+rotation = -1.5707964
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_j683x")
+
+[node name="RightSprite" type="AnimatedSprite2D" parent="." unique_id=1737313993]
+position = Vector2(0, -94)
+rotation = 1.5707964
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_j683x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2145552695]
 shape = SubResource("CapsuleShape2D_a7dhc")
