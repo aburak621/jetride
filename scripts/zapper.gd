@@ -6,14 +6,24 @@ class_name Zapper extends Area2D
 @onready var left_sprite: AnimatedSprite2D = $LeftSprite
 @onready var right_sprite: AnimatedSprite2D = $RightSprite
 @onready var beam: AnimatedSprite2D = $Beam
+@onready var particles_left: Sprite2D = $ParticlesLeft
+@onready var particles_right: Sprite2D = $ParticlesRight
 
 var length: float = 270
 var width: float = 60
 var rotation_speed: float = 0
+var particle_timer: float
 
 
 func _physics_process(delta: float) -> void:
 	rotation += deg_to_rad(rotation_speed) * delta
+
+	particles_left.rotation += deg_to_rad(-20) * delta
+	particles_right.rotation += deg_to_rad(-20) * delta
+	particle_timer -= delta
+	if particle_timer <= 0:
+		particle_timer += 0.1
+		update_particles_sprite()
 
 
 func apply_zapper_data() -> void:
@@ -25,6 +35,8 @@ func apply_zapper_data() -> void:
 
 	left_sprite.position.y = length / 2 - 35
 	right_sprite.position.y = -(length / 2 - 41)
+	particles_left.position = left_sprite.position
+	particles_right.position = right_sprite.position
 
 	var tiling: float = (length - 118) / 152
 	(beam.material as ShaderMaterial).set_shader_parameter("tiling", Vector2(tiling, 1))
@@ -35,3 +47,8 @@ func apply_zapper_data() -> void:
 	shape.height = length
 
 	rotation = deg_to_rad(zapper_data.rotation) * [-1, 1].pick_random()
+
+
+func update_particles_sprite() -> void:
+	particles_left.frame = (particles_left.frame + randi_range(1, 3)) % 4
+	particles_right.frame = (particles_right.frame + randi_range(1, 3)) % 4
